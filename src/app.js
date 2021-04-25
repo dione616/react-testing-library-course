@@ -5,6 +5,7 @@ import {submitForm} from './api'
 const MultiPageForm = React.createContext()
 
 function MultiPageFormProvider({initialValues = {}, ...props}) {
+  console.log()
   const [initState] = React.useState(initialValues)
   const [form, setFormValues] = React.useReducer(
     (s, a) => ({...s, ...a}),
